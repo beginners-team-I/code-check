@@ -1,14 +1,15 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
+    <div class="main-margin">
+    <router-link to="/codeCheck">codeCheck</router-link>
     <router-view />
+    </div>
   </div>
 </template>
 
 <style lang="scss">
+@import "./node_modules/bulma/bulma.sass";
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -28,5 +29,9 @@
       color: #42b983;
     }
   }
+}
+
+.main-margin{
+  margin: 0em 30em
 }
 </style>

@@ -3,9 +3,9 @@
   <button v-on:click="clickEvent(isClicked)" class="button is-white white-space"> {{ codeElement }} </button>
   <div v-if="isClicked">
     <div v-if="!isSend">
-      <textarea v-model="message" placeholder="質問の内容を入力してください"></textarea>
+      <input class="input is-primary" type="text" v-model="message" placeholder="質問の内容を入力してください">
       <br>
-      <button v-on:click="sendMessage()">メッセージを送る</button>
+      <button class="button is-success" v-on:click="sendMessage()">メッセージを送る</button>
     </div>
     <div v-else>
       {{ message }}

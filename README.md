@@ -9,8 +9,3 @@
         $ make up
 
 3. `http://localhost:8080/`にアクセス
-
-## ファイル概要
-back: バックエンド用ディレクトリ(fastify)
-<br>
-front: フロントエンド用ディレクトリ(Vue.js)

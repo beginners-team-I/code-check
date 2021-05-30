@@ -1,16 +1,16 @@
 const { KintoneRestAPIClient } = require('@kintone/rest-api-client');
 const clientCode = new KintoneRestAPIClient({
-    baseUrl: 'https://p0fnbkqr15dz.cybozu.com/',
+    baseUrl: 
     auth: {
-        username: "kenta.int.tech@gmail.com",
-        password: "1bjzhcct"
+        username: 
+        password: 
     }
 });
 const clientTag = new KintoneRestAPIClient({
-    baseUrl: 'https://p0fnbkqr15dz.cybozu.com/',
+    baseUrl: 
     auth: {
-        username: "kenta.int.tech@gmail.com",
-        password: "1bjzhcct"
+        username: 
+        password: 
     }
 });
 const fastify = require('fastify')();

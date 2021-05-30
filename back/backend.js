@@ -1,16 +1,16 @@
 // kintoneの設定
 const { KintoneRestAPIClient } = require('@kintone/rest-api-client');
 const clientCode = new KintoneRestAPIClient({
-    baseUrl: 'https://p0fnbkqr15dz.cybozu.com/',
+    baseUrl: 
     auth: {
-        apiToken: '3zzZ9hEpCuOAoDWBKX6WcsnqQ0JqHEU3Or9uZRX4'
+        apiToken: 
     }
 });
 
 const clientTag = new KintoneRestAPIClient({
-    baseUrl: 'https://p0fnbkqr15dz.cybozu.com/',
+    baseUrl: 
     auth: {
-        apiToken: 'VIg1sGnEH5gvAhBBbOPnFlGzqZLrAT1lyJU8UPRA'
+        apiToken: 
     }
 });
 

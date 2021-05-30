@@ -10,7 +10,11 @@
     <div class="box" v-else>
       <div class="husen">{{ message }}</div>
       <br>
+      <button class="button is-info" v-on:click="sendReply()">返信</button>
       <button class="button is-danger" v-on:click="deleteMessage()">削除</button>
+      <div v-if="isReplyed">
+        <Reply></Reply>
+      </div>
     </div>
   </div>
 </div>
@@ -33,18 +37,24 @@
 </style>
 
 <script>
+import Reply from "@/components/Reply.vue";
+
 export default {
   data() {
     return {
       isClicked: false,
       message:"",
-      isSend: false
+      isSend: false,
+      isReplyed: false
     };
   },
   watch: {
     codeElement: function () {
      this.message = ""
     }
+  },
+  components:{
+    Reply
   },
   props: {
     codeElement: {
@@ -62,6 +72,9 @@ export default {
     deleteMessage(){
       this.isClicked = !this.isClicked
       this.isSend = false;
+    },
+    sendReply(){
+      this.isReplyed = !this.isReplyed
     }
   }
 }

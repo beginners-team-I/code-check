@@ -7,9 +7,8 @@
       <br>
       <button class="button is-success" v-on:click="sendMessage()">メッセージを送る</button>
     </div>
-    <div class="box" v-else>
+    <div class="margin-text" v-else>
       <div class="husen">{{ message }}</div>
-      <br>
       <button class="button is-info" v-on:click="sendReply()">返信</button>
       <button class="button is-danger" v-on:click="deleteMessage()">削除</button>
       <div v-if="isReplyed">

@@ -8,7 +8,11 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+<<<<<<< HEAD
     "@kintone/rest-api-client": "^2.0.2",
+=======
+    "bulma": "^0.9.2",
+>>>>>>> 5fb828df564e4bf80dbcf65ec1b3816e2bda8f2a
     "core-js": "^3.6.5",
     "fastify": "^3.16.2",
     "fastify-cors": "^6.0.1",

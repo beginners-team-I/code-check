@@ -64,7 +64,5 @@ fastify.post('/postCode', async (request, reply) => {
         }
     );
     //reply.send({ message: JSON.stringify(data) });
-    // 引数のreplyを使ってWeb側へデータを渡す
-
 });
-fastify.listen(3000);
+fastify.listen(3000,"0.0.0.0");

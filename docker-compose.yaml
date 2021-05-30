@@ -1,6 +1,16 @@
 version: '3'
 
 services:
+  back:
+    build: ./back
+    volumes:
+      - ./back:/app
+    ports:
+      - '3000:3000'
+    tty: true
+    stdin_open: true
+    command: npm start
+
   front:
     build: ./front
     volumes:
@@ -10,7 +20,3 @@ services:
     tty: true
     stdin_open: true
     command: npm run serve
-
-volumes:
-  mysql_data:
-  bundle:

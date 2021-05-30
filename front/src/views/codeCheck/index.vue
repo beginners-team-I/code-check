@@ -1,4 +1,6 @@
 <template>
+
+
 <div>
   <textarea class="textarea" rows="10" v-model="code" placeholder="質問したいプログラムを入力してください"></textarea>
   <div class="code-layout" v-for="codeElement in codeArray">

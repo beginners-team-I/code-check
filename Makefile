@@ -19,6 +19,9 @@ stop:
 yarn:
 	docker-compose run front yarn install
 
+back_yarn:
+	docker-compose run back yarn install
+
 fastify:
 	docker-compose run front yarn add fastify fastify-cors nodemon
 

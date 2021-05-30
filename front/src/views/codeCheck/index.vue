@@ -2,7 +2,7 @@
 
 
 <div>
-  <textarea class="textarea" rows="10" v-model="code" placeholder="質問したいプログラムを入力してください"></textarea>
+  <textarea class="textarea margin-textarea" rows="10" v-model="code" placeholder="質問したいプログラムを入力してください"></textarea>
   <div class="code-layout" v-for="codeElement in codeArray">
     <comment :codeElement="codeElement"></comment>
   </div>
@@ -15,6 +15,9 @@
 }
 .white-space{
   white-space: pre-wrap; 
+}
+.margin-textarea{
+  margin: 2em
 }
 </style>
 

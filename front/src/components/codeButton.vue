@@ -3,13 +3,14 @@
   <button v-on:click="clickEvent(isClicked)" class="button is-white white-space"> {{ codeElement }} </button>
   <div v-if="isClicked">
     <div v-if="!isSend">
-      <input class="input is-primary" type="text" v-model="message" placeholder="質問の内容を入力してください">
+      <input class="input is-primary margin-text" type="text" v-model="message" placeholder="質問の内容を入力してください">
       <br>
       <button class="button is-success" v-on:click="sendMessage()">メッセージを送る</button>
     </div>
-    <div v-else>
+    <div class="box" v-else>
       {{ message }}
-       <button class="button is-danger" v-on:click="deleteMessage()">削除</button>
+      <br>
+      <button class="button is-danger" v-on:click="deleteMessage()">削除</button>
     </div>
   </div>
 </div>
@@ -21,6 +22,13 @@
 }
 .white-space{
   white-space: pre-wrap; 
+}
+.margin-text{
+  margin: 0.5em 0em
+}
+.fusen-design{
+  border-style: solid; 
+  border-color: red;
 }
 </style>
 

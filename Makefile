@@ -19,3 +19,10 @@ stop:
 yarn:
 	docker-compose run front yarn install
 
+fastify:
+	docker-compose run front yarn add fastify fastify-cors nodemon
+
+kintone:
+	docker-compose run front yarn add @kintone/rest-api-client
+
+

@@ -9,6 +9,7 @@
     </div>
     <div v-else>
       {{ message }}
+       <button class="button is-danger" v-on:click="deleteMessage()">削除</button>
     </div>
   </div>
 </div>
@@ -45,10 +46,14 @@ export default {
   },
   methods: {
     clickEvent(isClicked){
-      this.isClicked = true
+      this.isClicked = !this.isClicked
     },
     sendMessage(){
       this.isSend = true;
+    },
+    deleteMessage(){
+      this.isClicked = !this.isClicked
+      this.isSend = false;
     }
   }
 }

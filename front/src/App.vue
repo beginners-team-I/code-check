@@ -63,7 +63,6 @@
 
         <div class="column is-8">
         <!-- <div class="main-margin"> -->
-      <router-link to="/codeCheck">codeCheck</router-link>
       <router-view />
       <!-- </div> -->
     </div>

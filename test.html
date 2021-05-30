@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>一言SNS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://use.fontawesome.com/releases/v5.3.1/js/all.js" defer ></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css" />
+  </head>
+  <body>
+    <!-- 記述場所② -->
+        <header class="navbar">
+          <div class="navbar-brand">
+              <span class="navbar-item">
+                  <span class="fa fa-language"></span>チームビギナーズ
+              </span>
+          </div>
+          <div class="navbar-end">
+            <div class="navbar-item">
+                <div class="field has-addons">
+                  <div class="control">
+                      <input class="input" type="text" name="search" placeholder="キーワード検索">
+                  </div>
+                  <div class="control">
+                      <a class="button is-info"><i class="fa fa-search"></i>検索</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="navbar-item">
+              <a href="#"><i class="fa fa-user"></i>ログイン</a>
+            </div>
+          </div>
+      </header>
+    <!-- 記述場所③ -->
+    <style>
+      main {
+        background-color: #eeeeee;
+      }
+    </style>
+   
+<div class="hero is-info is-bold">
+  <div class="hero-body">
+      <div class="container">
+         <h1 class="title">Code-checker</h1>
+         <h2 class="subtitle">@UNISYS Hackathon</h2>
+      </div>
+  </div>
+</div>
+
+    <!-- 記述場所④ -->
+    
+  
+<!-- <section class="level">
+  <div class="level-left"></div>
+  <div class="level-right">
+    <div class="level-item tabs">
+      <ul>
+        <li class="is-active"><a>最近の一言</a></li>
+          <li><a>古い一言</a></li>
+          <li><a>コメント付き</a></li>
+        </ul>
+     </div>
+  </div>
+  <div class="level-right">
+    <div class="level-item">
+      <a class="button is-greylight">フォロー</a>
+    </div>
+  </div>
+</section> -->
+    <!-- 記述場所① -->
+    <main class="columns">
+      <div class="submenu column is-3">
+        <div class="notification is-info">
+          <button class="delete"></button>
+          右のボックスにコードを入力してください
+        </div>
+          　
+          <!-- <aside class="box menu">
+             <p class="menu-label">
+                おすすめの一言
+             </p>
+             <ul class="menu-list">
+                 <li><a href="#">株式会社カサ<small>@casainc</small></a></li>
+                 <li><a href="#">レア製作所<small>@rea-product</small></a></li>
+                 <li><a href="#">オフィス・アル<small>@office-al</small></a></li>
+              </ul>
+              <p class="menu-label">
+                  キーワード
+              </p>
+              <ul class="menu-list">
+                 <li><a href="#">システム開発</a></li>
+                 <li><a class="is-active" href="#">技術教育</a>
+                     <ul>
+                       <li><a href="#">一社研修</a></li>
+                       <li><a href="#">定期開催コース</a></li>
+                      </ul>
+                  </li>
+                  <li><a href="#">ソフトウェアテスティング</a></li>
+              </ul>
+           </aside> -->
+      </div>
+      <div class="column is-8">
+
+
+          <!-- <div class="media-content">
+             <div class="content">
+                <p><strong>CASAREAL</strong><br>
+                   内容、内容、内容、内容、内容、内容、内容、内容、内容、内容、内容、内容、内容<br>
+                   <small><a>Like</a> · <a>Reply</a> · 3 hrs</small>
+                 </p>
+             </div>
+             <article class="media">
+                 <figure class="media-left">
+                    <p class="image is-48x48">
+                       <img src="http://placehold.it/96x96">
+                    </p>
+                 </figure>
+                 <div class="media-content">
+                    <div class="content">
+                      <p><strong>Sean Brown</strong><br>
+                         コメントコメントコメントコメントコメントコメントコメントコメントコメントコメント<br>
+                         <small><a>Like</a> · <a>Reply</a> · 2 hrs</small>
+                      </p>
+                    </div>
+                    <article class="media">
+                       リプライリプライリプライリプライリプライリプライリプライリプライリプライリプライ。
+                    </article>
+                    <article class="media">
+                       リプライリプライリプライリプライリプライリプライリプライリプライリプライリプライ。
+                    </article>
+                 </div>
+             </article>
+          </div> -->
+  
+       
+       <article class="box media">
+        <div class="media-content">
+          <div class="block">
+            <strong> Please input the code here </strong>
+          </div>
+           <div class="content">
+                      border C1(t=0,1){x=t; y=0; label=1; };<br>
+                      border C2(t=0,1){x=1; y=t; label=2; };<br>
+                      border C3(t=0,1){x=1-t; y=1; label=3; };<br>
+                      border C4(t=0,1){x=0; y=1-t; label=4; };<br>
+                      <br>
+                      // triangulation<br>
+                      mesh Th = buildmesh(C1(8)+C2(8)+C3(8)+C4(8));<br>
+                      <br>
+                      // P1 space & functions<br>
+                      fespace Vh(Th,P1);<br>
+                      Vh uh,vh;<br>
+                      <br>
+                      // external force<br>
+                      func f = 5*pi^2*sin(pi*x)*sin(2*pi*y);<br>
+                      <br>
+                      // solving FEM<br>
+                      solve poisson(uh,vh) = int2d(Th)(dx(uh)*dx(vh) + dy(uh)*dy(vh)) <br>
+                                          - int2d(Th)(f*vh) <br>
+                                          + on(1,2,3,4,uh=0);<br>
+                                          <br>
+                      // plot the triangulation & solution<br>
+                      plot(Th,uh,fill=true,value=true,dim=3);<br>
+           </div>
+        </div>
+     </article>
+     
+
+
+       <article class="box media">
+          <div class="media-content">
+           
+             <div class="content">
+                        border C1(t=0,1){x=t; y=0; label=1; };<br>
+                        border C2(t=0,1){x=1; y=t; label=2; };<br>
+                        border C3(t=0,1){x=1-t; y=1; label=3; };<br>
+                        border C4(t=0,1){x=0; y=1-t; label=4; };<br>
+                        <br>
+                        // triangulation<br>
+                        mesh Th = buildmesh(C1(8)+C2(8)+C3(8)+C4(8));<br>
+                        <br>
+                        // P1 space & functions<br>
+                        fespace Vh(Th,P1);<br>
+                        Vh uh,vh;<br>
+                        <br>
+                        // external force<br>
+                        func f = 5*pi^2*sin(pi*x)*sin(2*pi*y);<br>
+                        <br>
+                        // solving FEM<br>
+                        solve poisson(uh,vh) = int2d(Th)(dx(uh)*dx(vh) + dy(uh)*dy(vh)) <br>
+                                            - int2d(Th)(f*vh) <br>
+                                            + on(1,2,3,4,uh=0);<br>
+                                            <br>
+                        // plot the triangulation & solution<br>
+                        plot(Th,uh,fill=true,value=true,dim=3);<br>
+             </div>
+          </div>
+       </article>
+      </div>
+    </main>
+    
+    
+    <footer class="footer">
+      <div class="container">
+        <div class="content has-text-centered">
+          2020 ©CASAREAL
+        </div>
+      </div>
+   </footer>
+  </body>
+  
+</html>

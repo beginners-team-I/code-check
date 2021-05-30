@@ -1,20 +1,17 @@
 <template>
 <div>
-  <button v-on:click="clickEvent(isClicked)" class="button is-white white-space"> {{ codeElement }} </button>
-  <div v-if="isClicked">
-    <div v-if="!isSend">
-      <input class="input is-primary margin-text" type="text" v-model="message" placeholder="質問の内容を入力してください">
-      <br>
-      <button class="button is-success" v-on:click="sendMessage()">メッセージを送る</button>
-    </div>
-    <div class="box" v-else>
-      {{ message }}
-      <br>
-      <button class="button is-info" v-on:click="sendReply()">返信</button>
-      <button class="button is-danger" v-on:click="deleteMessage()">削除</button>
-      <div v-if="isReplyed">
-        <Reply></Reply>
-      </div>
+  <div v-if="!isSend">
+    <input class="input is-primary margin-text" type="text" v-model="message" placeholder="質問の内容を入力してください">
+    <br>
+    <button class="button is-success" v-on:click="sendMessage()">メッセージを送る</button>
+  </div>
+  <div class="box" v-else>
+    {{ message }}
+    <br>
+    <button class="button is-info" v-on:click="sendReply()">返信</button>
+    <button class="button is-danger" v-on:click="deleteMessage()">削除</button>
+    <div v-if="isReplyed">
+      <Reply></Reply>
     </div>
   </div>
 </div>
@@ -53,15 +50,7 @@ export default {
      this.message = ""
     }
   },
-  components:{
-    Reply
-  },
-  props: {
-    codeElement: {
-      type: String,
-      required: true,
-    },
-  },
+  name: "Reply",
   methods: {
     clickEvent(isClicked){
       this.isClicked = !this.isClicked

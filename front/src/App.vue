@@ -120,4 +120,30 @@ footer {
     // color: #ffffff;
     height: 40px;
 }
+.husen {
+	width: 200px;
+	height: 40px;
+	line-height: 40px;
+	position: relative;
+	background: #f0f0f0 url("./assets/css_husen_sample02.gif") no-repeat right top;
+}
+.husen:after {
+	width: 170px;
+	height: 35px;
+	content: "";
+	position: absolute;
+	top: 0;
+	right: 2px;
+	/* ぼかし */
+	-moz-box-shadow: 0 5px 5px #999; /* Firefox */
+	-webkit-box-shadow: 0 5px 5px #999; /* Safari and Chrome */
+	box-shadow: 0 5px 5px #999;
+	/* 回転 */
+	-moz-transform: rotate(3deg); /* FireFox */
+	-webkit-transform: rotate(3deg); /* Safari and Chrome */
+	-o-transform: rotate(3deg); /* Opera */
+	-ms-transform: rotate(3deg); /* IE */
+	transform: rotate(3deg);
+	z-index: -1;
+}
 </style>
